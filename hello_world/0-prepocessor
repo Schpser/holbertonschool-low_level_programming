@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'gcc -E input.c -o output.i' > preprocess.sh
+:!gcc -E "$CILE" -o c
