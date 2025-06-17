@@ -1,15 +1,15 @@
 #include <stdio.h>
-
 /**
 * main - Entry point
 * Return: Always 0 (Success)
 */
 int main(void)
 {
-int number;
-for (number = 0; number <= 9; number++)
+int num;
+for (num = 0; num <= 9; num++)
 {
-putchar(number + '0');
+putchar(num + '0');
+if (num < 9)
 {
 putchar(',');
 putchar(' ');
