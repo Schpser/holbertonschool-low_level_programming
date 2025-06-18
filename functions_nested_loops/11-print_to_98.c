@@ -1,19 +1,14 @@
-#include "main.h"
 #include <stdio.h>
-
 /**
-* print_to_98 - Prints numbers from n to 98
-* @n: Starting number
+* main - Entry point
+* Return: Always 0 (Success)
 */
 void print_to_98(int n)
 {
-while (1)
+while (n != 98)
 {
-printf("%d", n);
-if (n == 98)
-break;
-printf(", ");
+printf("%d, ", n);
 n += (n < 98) ? 1 : -1;
 }
-printf("\n");
+printf("98\n");
 }
