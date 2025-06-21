@@ -1,17 +1,15 @@
 #include <stdio.h>
-
 /**
-* main - Entry point
-* Return: Always 0 (Success)
-*/
+ * main - Prints numbers 0-9
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-int number = 0;  /* Initialisation à 0 */
-while (number <= 9)
+int n;
+for (n = 0; n < 10; n++)
 {
-putchar(number + '0');  /* Conversion int → caractère */
-number++;
+putchar(n + '0');
 }
-putchar('\n');  /* Saut de ligne final */
+putchar('\n');
 return (0);
 }
