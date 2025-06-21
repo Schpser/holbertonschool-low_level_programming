@@ -2,7 +2,7 @@
 #include <string.h>
 /**
 * main - Prints quote to stderr
-* 
+*
 * Return: Always 1 (as required)
 */
 
