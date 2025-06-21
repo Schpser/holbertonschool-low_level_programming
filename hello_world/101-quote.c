@@ -1,12 +1,14 @@
 #include <unistd.h>
 #include <string.h>
 /**
-*write function : to print a quote
-*return (1)
+* main - Prints quote to stderr
+* 
+* Return: Always 1 (as required)
 */
 
-int main ()
+int main(void)
 {
-write(2,"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n",strlen("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"));
-	return 1;
+rite(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n",
+strlen("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"));
+return (1);
 }
