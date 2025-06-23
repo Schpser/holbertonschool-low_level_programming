@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int int_isupper(int c);
+int _int_isupper(int c);
 int _isdigit(int c);
-int mul(int a, int b);
+int _mul(int a, int b);
 
 void print_numbers(void);
 void print_most_numbers(void);
