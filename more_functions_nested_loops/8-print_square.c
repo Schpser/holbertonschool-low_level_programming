@@ -6,13 +6,13 @@
  */
 void print_square(int size)
 {
-int row, col;
+int line, col;
 if (size <= 0)
 {
 _putchar('\n');
 return;
 }    
-for (row = 0; row < size; row++)
+for (line = 0; line < size; line++)
 {
 for (col = 0; col < size; col++)
 {
