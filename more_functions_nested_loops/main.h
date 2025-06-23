@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int _int_isupper(int c);
+int _isupper(int c);
 int _isdigit(int c);
 int _mul(int a, int b);
 
