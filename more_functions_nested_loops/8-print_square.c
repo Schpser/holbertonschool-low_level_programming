@@ -11,7 +11,7 @@ if (size <= 0)
 {
 _putchar('\n');
 return;
-}    
+}
 for (line = 0; line < size; line++)
 {
 for (col = 0; col < size; col++)
