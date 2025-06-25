@@ -1,5 +1,6 @@
+#ifndef MAIN_H
+#define MAIN_H
 int _atoi(char *s);
-int _strlen(char *s);
 int _putchar(char c);
 
 char *_strcpy(char *dest, char *src);
@@ -12,3 +13,5 @@ void puts2(char *str);
 void rev_string(char *s);
 void print_rev(char *s);
 void _puts(char *str);
+int _strlen(char *s);
+#endif
