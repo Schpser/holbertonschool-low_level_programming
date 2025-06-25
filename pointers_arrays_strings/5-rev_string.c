@@ -11,8 +11,8 @@ void rev_string(char *s)
 {
 char *end = s;
 char swap;
-
-if (!s) return;
+if (!s)
+return;
 while (*end)
 end++;
 end--;
