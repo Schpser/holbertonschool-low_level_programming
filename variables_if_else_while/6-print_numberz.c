@@ -6,12 +6,12 @@
 */
 int main(void)
 {
-int number = 0;  /* Initialisation |  0 */
+int number = 0;
 while (number <= 9)
 {
-putchar(number + '0');  /* Conversion int ~F~R caractère */
+putchar(number + '0');
 number++;
 }
-putchar('\n');  /* Saut de ligne final */
+putchar('\n');
 return (0);
 }
