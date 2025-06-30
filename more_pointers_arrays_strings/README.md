@@ -1,17 +1,3 @@
-Resources
-Read or watch:
-
-C - Pointer to Pointer
-C – Pointer to Pointer with example
-Multi-dimensional Arrays in C
-Two dimensional (2D) arrays in C programming with example
-Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-
-General
-What are pointers to pointers and how to use them
-What are multidimensional arrays and how to use them
-What are the most common C standard library functions to manipulate strings
 Requirements
 General
 Allowed editors: vi, vim, emacs
@@ -27,14 +13,16 @@ You don’t have to push _putchar.c, we will use our file. If you do it won’t 
 In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
 The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called main.h
 Don’t forget to push your header file
-More Info
-You do not need to learn about pointers to functions, arrays of structures, malloc and free - yet.
-0. memset
-1. memcpy
-2. strchr
-3. strspn
-4. strpbrk
-5. strstr
-6. Chess is mental torture
-7. The line of life is a ragged diagonal between duty and desire
 
+0. 98 Battery st.
+1. Don't swap horses in crossing a stream
+2. This report, by its very length, defends itself against the risk of being read
+3. I do not fear computers. I fear the lack of them
+4. I can only go one way. I've not got a reverse gear
+5. A good engineer thinks in reverse and asks himself about the stylistic consequences of the components and systems he proposes
+6. Half the lies they tell about me aren't true
+7. Winning is only half of it. Having fun is the other half
+8. Arrays are not pointers
+9. strcpy
+10. Great leaders are willing to sacrifice the numbers to save the people. Poor leaders sacrifice the people to save the numbers
+Welcome to the chat! Type a message to get started.
