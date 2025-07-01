@@ -7,23 +7,23 @@
  */
 int _sqrt_recursion(int n)
 {
-	static int guess = 1;
+	static int temp = 1;
 	int result;
 
 	if (n < 0)
 		return (-1);
-	if (guess * guess == n)
+	if (temp * temp == n)
 	{
-		result = guess;
-		guess = 1;
+		result = temp;
+		temp = 1;
 		return (result);
 	}
-	if (guess * guess > n)
+	if (temp * temp > n)
 	{
-		guess = 1;
+		temp = 1;
 		return (-1);
 	}
 
-	guess++;
+	temp++;
 	return (_sqrt_recursion(n));
 }
