@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- * main - Affiche le nom du programme
- * @argc: Nombre d'arguments (non utilisé)
- * @argv: Tableau d'arguments
- * Return: Toujours 0
+ * main - Prints programm's name
+ * @argc: Number of arguments
+ * @argv: Argument's array
+ * Return: Always (0)
  */
 int main(int argc, char *argv[])
 {
