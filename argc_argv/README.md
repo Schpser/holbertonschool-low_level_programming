@@ -20,6 +20,8 @@ The prototypes of all your functions and the prototype of the function _putchar 
 Don’t forget to push your header file
 You are allowed to use the standard library
 
+![argc_argv Meme](https://github.com/user-attachments/assets/cddf9c03-290d-4dbf-8e8f-b85c2dd630df)
+
 
 0. It ain't what they call you, it's what you answer to
 1. Silence is argument carried out by other means
