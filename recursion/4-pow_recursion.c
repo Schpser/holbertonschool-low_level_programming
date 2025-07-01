@@ -2,7 +2,7 @@
 /**
  * _pow_recursion - Calculate x^y récursively
  * @x: Base number
- * @y: Exposant number
+ * @y: Exponent number
  * Return: x^y, or -1 if y is negative
  */
 int _pow_recursion(int x, int y)
