@@ -13,8 +13,6 @@ void print_chessboard(char (*a)[8])
 		for (colonne = 0; colonne < 8; colonne++)
 		{
 			_putchar(a[ligne][colonne]);
-			if (colonne < 7)
-				_putchar(' ');
 		}
 		_putchar('\n');
 	}
