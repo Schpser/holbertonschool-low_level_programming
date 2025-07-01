@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _puts_recursion - Display a string from "parent" letter
+ * _print_rev_recursion - Display a reversed string
  * @s: The string
  * Return: The string in reverse
  */
