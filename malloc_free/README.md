@@ -24,6 +24,7 @@ Don’t forget to push your header file
 More Info
 You do not have to learn about calloc and realloc.
 
+![Memory_Leak](https://github.com/user-attachments/assets/7ea07a49-21c0-4888-b3e3-0433fbbd2fdb)
 
 0. Float like a butterfly, sting like a bee
 1. The woman who has no imagination has no wings
