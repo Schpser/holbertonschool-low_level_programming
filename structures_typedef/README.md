@@ -1,3 +1,4 @@
+
 Learning Objectives
 
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
@@ -20,7 +21,7 @@ In the following examples, the main.c files are shown as examples. You can use t
 Don’t forget to push your header file
 All your header files should be include guarded
 
-
+![typedef struct](https://github.com/user-attachments/assets/fb19bd65-777d-4f61-8793-4d275dde1445)
 
 0. Poppy
 1. A dog is the only thing on earth that loves you more than you love yourself
