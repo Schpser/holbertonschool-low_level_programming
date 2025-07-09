@@ -3,40 +3,40 @@
 #include "dog.h"
 
 /**
- * new_dog - Creates a new dog (with strict C89 compliance)
- * @name: Dog's name (must not be NULL)
+ * new_dog - Creates a new dog
+ * @name: Dog's name
  * @age: Dog's age
- * @owner: Dog's owner (must not be NULL)
+ * @owner: Dog's owner
  * Return: Pointer to new dog, or NULL if fails
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
 	char *name_copy, *owner_copy;
-
-	if (!name || !owner)
-		return (NULL);
+	size_t name_len, owner_len;
 
 	d = malloc(sizeof(dog_t));
 	if (!d)
 		return (NULL);
 
-	name_copy = malloc(strlen(name) + 1);
+	name_len = strlen(name) + 1;
+	name_copy = malloc(name_len);
 	if (!name_copy)
 	{
 		free(d);
 		return (NULL);
 	}
-	strcpy(name_copy, name);
+	memcpy(name_copy, name, name_len);
 
-	owner_copy = malloc(strlen(owner) + 1);
+	owner_len = strlen(owner) + 1;
+	owner_copy = malloc(owner_len);
 	if (!owner_copy)
 	{
 		free(name_copy);
 		free(d);
 		return (NULL);
 	}
-	strcpy(owner_copy, owner);
+	memcpy(owner_copy, owner, owner_len);
 
 	d->name = name_copy;
 	d->age = age;
