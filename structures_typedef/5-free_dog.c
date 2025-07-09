@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /**
- * free_dog - Libère un dog_t
- * @d: Pointeur vers le dog à libérer
+ * free_dog - Frees memory allocated for a dog
+ * @d: Pointer to dog to free
  */
 void free_dog(dog_t *d)
 {
