@@ -1,68 +1,97 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
-* print_number - Prints an integer using _putchar
-* @n: The integer to print
+* is_digit - Checks if string contains only digits
+* @s: String to check
+* Return: 1 if only digits, 0 otherwise
 */
-void print_number(int n)
+int is_digit(char *s)
 {
-	if (n < 0)
+	while (*s)
 	{
-		_putchar('-');
-		n = -n;
+		if (*s < '0' || *s > '9')
+			return (0);
+		s++;
 	}
-	if (n / 10)
-	{
-		print_number(n / 10);
-	}
-	_putchar(n % 10 + '0');
+	return (1);
 }
 
 /**
-* main - Multiplies two positive numbers
-* @argc: Number of arguments
-* @argv: Array of arguments
+* multiply - Multiplies two big number strings
+* @num1: First number string
+* @num2: Second number string
+* Return: Result string
+*/
+char *multiply(char *num1, char *num2)
+{
+	int len1 = strlen(num1);
+	int len2 = strlen(num2);
+	int *result = calloc(len1 + len2, sizeof(int));
+	char *final;
+	int i, j, sum;
+
+	/* Multiplication algorithm */
+	for (i = len1 - 1; i >= 0; i--)
+	{
+		for (j = len2 - 1; j >= 0; j--)
+		{
+			sum = (num1[i] - '0') * (num2[j] - '0') + result[i + j + 1];
+			result[i + j + 1] = sum % 10;
+			result[i + j] += sum / 10;
+		}
+	}
+
+	/* Convert to string */
+	final = malloc(len1 + len2 + 1);
+	i = 0;
+	while (i < len1 + len2 && result[i] == 0)
+		i++;
+
+	if (i == len1 + len2)
+	{
+		final[0] = '0';
+		final[1] = '\0';
+	}
+	else
+	{
+		for (j = 0; i < len1 + len2; i++, j++)
+			final[j] = result[i] + '0';
+		final[j] = '\0';
+	}
+
+	free(result);
+	return (final);
+}
+
+/**
+* main - Entry point
+* @argc: Argument count
+* @argv: Argument array
 * Return: 0 on success, 98 on error
 */
 int main(int argc, char *argv[])
 {
-	int i, j;
-	long num1, num2;
+	char *res;
+	int i;
 
-	if (argc != 3)
+	if (argc != 3 || !is_digit(argv[1]) || !is_digit(argv[2]))
 	{
-		_putchar('E');
-		_putchar('r');
-		_putchar('r');
-		_putchar('o');
-		_putchar('r');
-		_putchar('\n');
+		/* Error message using _putchar */
+		char *err = "Error\n";
+
+		for (i = 0; err[i]; i++)
+			_putchar(err[i]);
 		return (98);
 	}
 
-	for (i = 1; i < 3; i++)
-	{
-		for (j = 0; argv[i][j]; j++)
-		{
-			if (argv[i][j] < '0' || argv[i][j] > '9')
-			{
-				_putchar('E');
-				_putchar('r');
-				_putchar('r');
-				_putchar('o');
-				_putchar('r');
-				_putchar('\n');
-				return (98);
-			}
-		}
-	}
-
-	num1 = atol(argv[1]);
-	num2 = atol(argv[2]);
-	print_number(num1 * num2);
+	res = multiply(argv[1], argv[2]);
+	for (i = 0; res[i]; i++)
+		_putchar(res[i]);
 	_putchar('\n');
 
+	free(res);
 	return (0);
 }
 
