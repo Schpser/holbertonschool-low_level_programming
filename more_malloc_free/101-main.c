@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	char *res;
+	char *res = NULL;
 	int i;
 
 	if (argc != 3 || !is_digit(argv[1]) || !is_digit(argv[2]))
@@ -23,6 +23,11 @@ int main(int argc, char *argv[])
 
 	res = multiply(argv[1], argv[2]);
 	if (!res)
+	{
+		char err[] = "Error\n";
+		for (i = 0; err[i]; i++)
+			_putchar(err[i]);
+		free(res);}
 		return (98);
 
 	for (i = 0; res[i]; i++)
@@ -30,5 +35,6 @@ int main(int argc, char *argv[])
 	_putchar('\n');
 
 	free(res);
+	res = NULL;
 	return (0);
 }

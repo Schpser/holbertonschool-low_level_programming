@@ -47,7 +47,8 @@ char *multiply(char *num1, char *num2)
 	final = malloc(len1 + len2 + 1);
 
 	if (!final)
-	return (free(result), NULL);
+	free(result);
+	return (NULL);
 
 	if (i == len1 + len2)
 	{
