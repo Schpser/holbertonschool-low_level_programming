@@ -34,7 +34,6 @@ int main(int argc, char *argv[])
 		_putchar(res[i]);
 	_putchar('\n');
 
-	free(res);
 	res = NULL;
 	return (0);
 }
