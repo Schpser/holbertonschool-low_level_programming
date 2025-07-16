@@ -1,50 +1,47 @@
-#include "function_pointers.h"
+#include "3-calc.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
- * main - Entry point for the simple calculator program.
- * @argc: The number of command-line arguments.
- * @argv: An array of strings containing the arguments.
- *
- * Return: 0 on success.
- * 98 if the number of arguments is incorrect.
- * 99 if the operator is invalid.
- * 100 if division or modulo by zero is attempted.
+ * main - a program that performs simple operations.
+ * @argc: The number of command-line arguments
+ * @argv: An array containing the command-line arguments
+ * Return: 0 on success, or an error code on failure,
+ * 98 if the number of arguments is wrong,
+ * 99 if the operator is none of the above,
+ * 100 if the user tries to divide (/ or %) by 0.
  */
 int main(int argc, char *argv[])
 {
-	char *op_str;
+	int num1, num2, result;
+	char *op;
 	int (*op_func)(int, int);
-	char *error_msg = "Error\n";
-	int i_err;
-	int num_val_b;
 
 	if (argc != 4)
 	{
-		for (i_err = 0; error_msg[i_err] != '\0'; i_err++)
-			_putchar(error_msg[i_err]);
+		printf("Error\n");
 		exit(98);
 	}
+	num1 = atoi(argv[1]);
+	op = argv[2];
+	num2 = atoi(argv[3]);
 
-	op_str = argv[2];
-	op_func = get_op_func(op_str);
+	op_func = get_op_func(op);
 
 	if (op_func == NULL)
 	{
-		for (i_err = 0; error_msg[i_err] != '\0'; i_err++)
-			_putchar(error_msg[i_err]);
+		printf("Error\n");
 		exit(99);
 	}
 
-	if ((op_str[0] == '/' || op_str[0] == '%') && op_str[1] == '\0')
+	if ((*op == '/' || *op == '%') && num2 == 0)
 	{
-		num_val_b = atoi(argv[3]); /* Convert num2 for this check */
-		if (num_val_b == 0)
-		{
-			for (i_err = 0; error_msg[i_err] != '\0'; i_err++)
-				_putchar(error_msg[i_err]);
-			exit(100);
-		}
+		printf("Error\n");
+		exit(100);
 	}
-	return (0);
 
+	result = op_func(num1, num2);
+
+	printf("%d\n", result);
+
+	return (0);
 }
