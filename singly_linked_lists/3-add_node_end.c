@@ -6,7 +6,7 @@
 /**
  * add_node_end - To add a node at the end of the list
  * @str: The string, needs to be duplicated
- * @head: The beginning of the list
+ * @head: Pointer to the first node of the list
  * strdup - To duplicate str
  * Return: The list with the new nod
  */
