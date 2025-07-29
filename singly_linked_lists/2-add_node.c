@@ -7,7 +7,7 @@
  * add_node - To add a node at the beginning of the list
  * @str: The string, needs to be duplicated
  * @head: Pointer to the first node of the list
- * Return: The list with the new nod
+ * Return: The list with the new nod, NULL if failure
  */
 
 list_t *add_node(list_t **head, const char *str)
@@ -37,7 +37,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	new_node->str = dup_str;
-	new_node->len = strlen(str);
+	new_node->len = len;
 	new_node->next = *head;
 	*head = new_node;
 
