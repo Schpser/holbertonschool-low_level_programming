@@ -1,38 +1,34 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "lists.h"
-
 /**
- * add_node_end - To add a node at the end of the list
- * @str: The string, needs to be duplicated
- * @head: Pointer to the first node of the list
- * strdup - To duplicate str
- * Return: The list with the new nod
- */
-
+*add_node_end - Add a new node at the end
+*@head: Pointer to the first node
+*@str: Pointer to a string
+*Return: The list with the new element, or NULL if it failed
+*/
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node = malloc(sizeof(list_t));
+	list_t *new_node, *temporary;
+	char *duplicate_str;
+	unsigned int len = 0;
 
-	if (str == NULL)
-	{
-		return (NULL);
-	}
+	while (str[len])
+	len++;
+
+	new_node = malloc(sizeof(list_t));
 
 	if (new_node == NULL)
 	{
-		return (NULL);
+	return (NULL);
 	}
+	duplicate_str = strdup(str);
 
-	new_node->str = strdup(str);
-
-	if (new_node->str == NULL)
+	if (duplicate_str == NULL)
 	{
-		free(new_node);
-		return (NULL);
+	free(new_node);
+	return (NULL);
 	}
-	new_node->len = strlen(str);
+	new_node->str = duplicate_str;
+	new_node->len = len;
 	new_node->next = NULL;
 
 	if (*head == NULL)
@@ -41,13 +37,12 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	else
 	{
-		list_t *last_node = *head;
-
-		while (last_node->next != NULL)
+		temporary = *head;
+		while (temporary->next != NULL)
 		{
-			last_node = last_node->next;
+			temporary = temporary->next;
 		}
-	last_node->next = new_node;
+			temporary->next = new_node;
 	}
 	return (new_node);
 }
