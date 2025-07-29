@@ -6,7 +6,7 @@
 /**
  * add_node - To add a node at the beginning of the list
  * @str: The string, needs to be duplicated
- * strdup - To duplicate str
+ * @head: Pointer to the first node of the list
  * Return: The list with the new nod
  */
 
@@ -14,11 +14,12 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node = malloc(sizeof(list_t));
 
-	if  (!new_node)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
-	if (new_node == NULL)
+
+	if  (!new_node)
 	{
 		return (NULL);
 	}
